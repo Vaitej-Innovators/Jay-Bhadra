@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% block title %}Products{% endblock %}
+
+{% block content %}
+
+
+<section class="section-container" id="long-reach">
+  <div class="section-header reveal">
+    <span class="section-tag">FLAGSHIP SERIES</span>
+    <h2 class="hack-text">LONG REACH BOOMS</h2>
+    <div class="header-line"></div>
+  </div>
+
+  <div class="split-layout reveal">
+    <div class="text-block">
+      <h3>The Reach You Need.</h3>
+      <p class="product-desc">
+        Custom manufactured long reach boom arms designed for dredging, 
+        well-digging, and deep excavation. Fabricated using high-tensile 
+        <strong>Hyundai Posco 350C steel</strong> for maximum structural integrity.
+      </p>
+      
+      <div class="spec-grid">
+        <div class="spec-item">
+          <span class="spec-label">Range</span>
+          <span class="spec-value">17.5m – 21m</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Reach</span>
+          <span class="spec-value">50ft – 70ft</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Steel</span>
+          <span class="spec-value">Posco 350C</span>
+        </div>
+      </div>
+
+      <a href="{{ url_for('contact') }}" class="btn btn-primary" style="margin-top: 30px;">Get Quote</a>
+    </div>
+
+    <div class="image-block">
+      <model-viewer 
+          src="{{ url_for('static', filename='assets/models/long-reach.glb') }}" 
+          poster="{{ url_for('static', filename='assets/images/long_reach_boom.jpeg') }}"
+          alt="Long Reach Attachment"
+          auto-rotate camera-controls
+          style="width:100%; height:500px; background:#f4f5f7;">
+      </model-viewer>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark" id="grabber">
+  <div class="section-container">
+    <div class="split-layout reveal">
+      <div class="image-block">
+         <img src="{{ url_for('static', filename='assets/images/grabber.jpg') }}" alt="Hydraulic Grabber" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+
+      <div class="text-block">
+        <span class="section-tag" style="color:var(--accent);">SPECIALIZED HANDLING</span>
+        <h2 style="color: white; margin-bottom: 20px;">HYDRAULIC GRABBERS</h2>
+        <p class="product-desc" style="color: #e0e0e0;">
+          Heavy-duty Orange Peel and Clamshell grabbers engineered for scrap handling 
+          and waste management. Features 360° hydraulic rotation and hardened steel tines 
+          for aggressive gripping power.
+        </p>
+
+        <ul class="spec-list dark-mode-list">
+          <li><i class="fa-solid fa-rotate"></i> <strong>Rotation:</strong> 360° Continuous</li>
+          <li><i class="fa-solid fa-weight-hanging"></i> <strong>Build:</strong> Heavy Duty Cylinders</li>
+          <li><i class="fa-solid fa-shield-halved"></i> <strong>Tips:</strong> Replaceable Hardened Steel</li>
+        </ul>
+
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Request Specs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-container" id="buckets">
+  <div class="section-header reveal">
+    <span class="section-tag">EARTHMOVING</span>
+    <h2 class="hack-text">BUCKET ARSENAL</h2>
+    <div class="header-line"></div>
+  </div>
+
+  <div class="grid-container">
+    <div class="tech-card reveal">
+      <img src="{{ url_for('static', filename='assets/images/shovel_bucket.jpg') }}" alt="Shovel Bucket">
+      <h3>Shovel Bucket</h3>
+      <p>Optimized for loading and mass excavation.</p>
+    </div>
+
+    <div class="tech-card reveal">
+      <img src="https://winattachments.com.au/wp-content/uploads/2023/02/WA-Backhoe-SB.jpg" alt="Backhoe Bucket">
+      <h3>Backhoe Bucket</h3>
+      <p>Standard digging bucket for general purpose.</p>
+    </div>
+
+    <div class="tech-card reveal">
+      <img src="https://tse1.explicit.bing.net/th/id/OIP.bt3gd2mVJ-0pjvfRoOgFFQHaGa" alt="Loader Bucket">
+      <h3>Loader Bucket</h3>
+      <p>High capacity material handling bucket.</p>
+    </div>
+
+    <div class="tech-card reveal">
+      <img src="https://galenattachments.com/wp-content/uploads/2021/06/Heavy-Duty-Bucket-Excavator-7.jpg" alt="HD Excavator Bucket">
+      <h3>Rock / HD Bucket</h3>
+      <p>Reinforced with wear strips for abrasive ground.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-dark" id="refurbishment">
+  <div class="section-container">
+    <div class="section-header reveal" style="color:white;">
+      <span class="section-tag">LIFECYCLE SOLUTIONS</span>
+      <h2 style="color:white;">MACHINE REFURBISHMENT</h2>
+      <p style="color:#d0d0d0; max-width: 600px;">Don't scrap it. Rebuild it. We restore machines to factory performance levels.</p>
+    </div>
+
+    <div class="grid-container">
+      <div class="tech-card reveal" style="background: #252830; border-color: #333;">
+        <img src="{{ url_for('static', filename='assets/images/machine.jpg') }}" alt="Mechanical Restoration">
+        <h3 style="color:white;">Mechanical Restoration</h3>
+        <p style="color:#bbb;">Engine overhaul, hydraulic pump repair, and structural alignment.</p>
+      </div>
+
+      
+      <div class="tech-card reveal" style="background: #252830; border-color: #333;">
+        <img src="{{ url_for('static', filename='assets/images/hyva-body.jpg') }}" alt="Body Fabrication">
+        <h3 style="color:white;">Body Fabrication</h3>
+        <p style="color:#bbb;">Custom Hyva bodies and high-bed trailers built to spec.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta reveal">
+  <div class="cta-content">
+    <h2>CUSTOM REQUIREMENT?</h2>
+    <p>If it involves steel and hydraulics, we can build it.</p>
+    <a href="{{ url_for('contact') }}" class="btn btn-primary">Speak to Engineer</a>
+  </div>
+</section>
+
+{% endblock %}

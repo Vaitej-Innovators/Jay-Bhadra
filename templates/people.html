@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+{% block title %}People{% endblock %}
+
+{% block styles %}
+<style>
+    /* --- Professional Card Styling (Consistent with Facility/Capabilities) --- */
+    .feature-card {
+        background: white;
+        border: 1px solid #e5e7eb;
+        padding: 40px 30px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    /* Top Orange Accent on Hover */
+    .feature-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 0%; height: 4px;
+        background: var(--accent);
+        transition: width 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        border-color: transparent;
+    }
+
+    .feature-card:hover::before {
+        width: 100%;
+    }
+
+    /* Icon Styling */
+    .card-icon {
+        font-size: 2.2rem;
+        color: #333;
+        margin-bottom: 25px;
+        transition: color 0.3s ease;
+    }
+
+    .feature-card:hover .card-icon {
+        color: var(--accent);
+    }
+
+    .card-title {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #1a1d24;
+        margin-bottom: 15px;
+    }
+
+    .card-desc {
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+    
+    /* List styling inside cards */
+    .spec-list {
+        margin-top: 20px;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .spec-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+        color: #555;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .spec-list li i {
+        color: var(--accent);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="section-container" style="margin-top:120px;">
+    <div class="section-header reveal">
+        <span class="section-tag">OUR PEOPLE</span>
+        <h2 class="hack-text">LEADERSHIP & ENGINEERING TEAM</h2>
+        <div class="header-line"></div>
+    </div>
+
+    <p class="reveal" style="max-width:850px; color:#555;">
+        Behind every reliable machine is a team that understands engineering
+        beyond drawings and specifications.
+    </p>
+</section>
+
+<section class="section-container" style="padding-top:40px;">
+    <div class="split-layout reveal">
+        
+        <div class="feature-card">
+            <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <h3 class="card-title">Founder & Director</h3>
+            <p class="card-desc" style="font-size:1.1rem; color:var(--text-primary); margin-bottom:10px;">
+                <strong>Rahul Gunjal</strong>
+            </p>
+            <p class="card-desc">
+                With over 7 years of hands-on experience in fabrication,
+                machine restoration, and hydraulic systems, establishing
+                Jay Bhadra with a focus on durability and real-world performance.
+            </p>
+
+            <ul class="spec-list">
+                <li><i class="fa-solid fa-check"></i> 7+ years industry experience</li>
+                <li><i class="fa-solid fa-check"></i> Heavy fabrication & hydraulics expert</li>
+                <li><i class="fa-solid fa-check"></i> Infrastructure & mining exposure</li>
+            </ul>
+        </div>
+
+        <div class="image-block" style="background:#f0f0f0; border:1px solid var(--border-line); display:grid; place-items:center; overflow:hidden;">
+            <img src="{{ url_for('static', filename='assets/images/IMG_3915.JPG') }}" alt="Rahul Gunjal - Founder" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+    </div>
+</section>
+
+<section class="grid-section">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <span class="section-tag">ENGINEERING TEAM</span>
+            <h2 class="hack-text">TECHNICAL EXPERTISE</h2>
+        </div>
+
+        <div class="grid-container">
+            <div class="feature-card reveal">
+                <div class="card-icon"><i class="fa-solid fa-hard-hat"></i></div>
+                <h3 class="card-title">Fabrication Engineers</h3>
+                <p class="card-desc">Experts in structural fabrication, welding integrity, and load-bearing systems.</p>
+            </div>
+
+            <div class="feature-card reveal">
+                <div class="card-icon"><i class="fa-solid fa-cogs"></i></div>
+                <h3 class="card-title">Hydraulic Specialists</h3>
+                <p class="card-desc">Design and integration of complex hydraulic mechanisms and cylinder systems.</p>
+            </div>
+
+            <div class="feature-card reveal">
+                <div class="card-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                <h3 class="card-title">Quality & Inspection</h3>
+                <p class="card-desc">Ensuring dimensional accuracy, weld quality, and safety compliance.</p>
+            </div>
+
+            <div class="feature-card reveal">
+                <div class="card-icon"><i class="fa-solid fa-users-gear"></i></div>
+                <h3 class="card-title">Production Supervisors</h3>
+                <p class="card-desc">On-ground execution, workflow optimization, and timeline management.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="final-cta reveal">
+    <div class="cta-content">
+        <h2>WORK WITH AN EXPERIENCED TEAM</h2>
+        <p>Engineering decisions backed by decades of execution.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Connect With Us</a>
+    </div>
+</section>
+{% endblock %}

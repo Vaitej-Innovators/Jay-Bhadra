@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% block title %}Industrial Engineering{% endblock %}
+
+{% block content %}
+<div class="preloader" id="preloader">
+  <div class="loader-content">
+    <div class="loader-header">
+      <span>JAY BHADRA SYSTEMS</span>
+      <span>V 4.0</span>
+    </div>
+    <div class="loader-bar-bg">
+      <div class="loader-bar-fill"></div>
+    </div>
+    <div class="loader-data">
+      <span class="loader-status">INITIALIZING...</span>
+      <span class="loader-percentage"></span>
+    </div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="video-overlay"></div>
+
+  <div class="hero-slider">
+    <div class="slide active" style="background-image: url('{{ url_for('static', filename='assets/images/slide_3.jpeg') }}');"></div>
+    
+    <div class="slide" style="background-image: url('{{ url_for('static', filename='assets/images/customer_2.jpeg') }}');"></div>
+    
+    <div class="slide" style="background-image: url('{{ url_for('static', filename='assets/images/customer_3.jpeg') }}');"></div>
+  </div>
+
+  <div class="hero-content reveal" id="parallax-content">
+    <div class="badge">EST. 2020 // MAHARASHTRA</div>
+
+    <h1 class="hero-title glitch">
+      ENGINEERING<br>
+      <span class="text-outline">THE IMPOSSIBLE</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Manufacturing Long Reach Boom Arms (17.5mt - 21mt) and Heavy-Duty Attachments.
+      Engineered with <strong>Hyundai Posco 350C Steel</strong>.
+    </p>
+
+    <div class="hero-actions">
+      <a href="{{ url_for('products') }}" class="btn btn-primary">Explore Systems</a>
+      <a href="{{ url_for('contact') }}" class="btn btn-secondary">Get Quote</a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>SCROLL TO EXPLORE</span>
+    <div class="line"></div>
+  </div>
+</section>
+
+<section class="stat-strip reveal">
+  <div class="stat-box">
+    <h2 class="counter" data-target="6">0</h2>
+    <p>YEARS EXPERIENCE</p>
+  </div>
+  <div class="vertical-line"></div>
+  <div class="stat-box">
+    <h2 class="counter" data-target="30">0</h2>
+    <p>CUSTOMERS SERVED</p>
+  </div>
+  <div class="vertical-line"></div>
+  <div class="stat-box">
+    <h2>PAN-INDIA</h2>
+    <p>OPERATIONAL REACH</p>
+  </div>
+</section>
+
+<section class="product-section">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag">FLAGSHIP SERIES</span>
+      <h2 class="hack-text">LONG REACH SYSTEMS</h2>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="split-layout reveal">
+      <div class="text-block">
+        <h3>REACH FURTHER. DIG DEEPER.</h3>
+        <p>
+          Custom manufactured long reach boom arms designed for maximum reach.
+          Leveraging high-value steel and rich experience in fabrication.
+        </p>
+        <ul class="spec-list">
+          <li><i class="fa-solid fa-crosshairs"></i> <strong>Range:</strong> 17.5mt – 21mt</li>
+          <li><i class="fa-solid fa-ruler-vertical"></i> <strong>Reach:</strong> 50ft – 70ft</li>
+          <li><i class="fa-solid fa-layer-group"></i> <strong>Material:</strong> 350C Hyundai Posco Steel</li>
+        </ul>
+        <a href="{{ url_for('products') }}" class="btn btn-primary">View Specs</a>
+      </div>
+
+      <div class="image-block">
+        <model-viewer 
+            src="{{ url_for('static', filename='assets/models/long-reach.glb') }}" 
+            poster="{{ url_for('static', filename='assets/images/lrb.jpeg') }}"
+            alt="Long Reach Boom"
+            auto-rotate camera-controls shadow-intensity="1"
+            style="width:100%; height:400px; background:#f0f0f0;">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="grid-section">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag">ATTACHMENTS</span>
+      <h2 class="hack-text">THE ARSENAL</h2>
+    </div>
+
+    <div class="grid-container">
+      <a href="{{ url_for('products') }}" class="tech-card reveal">
+        <div class="card-icon"><i class="fa-solid fa-bucket"></i></div>
+        <h3>HD Buckets</h3>
+        <p>Shovel, Backhoe & Trenching buckets for extreme conditions.</p>
+      </a>
+
+      <a href="{{ url_for('products') }}" class="tech-card reveal">
+        <div class="card-icon"><i class="fa-solid fa-truck-monster"></i></div>
+        <h3>Garbage Tippers</h3>
+        <p>Urban waste solutions with top-closure technology.</p>
+      </a>
+
+      <a href="{{ url_for('capabilities') }}" class="tech-card reveal">
+        <div class="card-icon"><i class="fa-solid fa-pencil-ruler"></i></div>
+        <h3>Custom Fabrication</h3>
+        <p>Designed exactly as per project requirement.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="facility-section">
+  <div class="overlay-light"></div>
+  <div class="facility-content reveal">
+    <span class="section-tag">STATE OF THE ART FACILITY</span>
+    <h2>GIVE YOUR MACHINE A SECOND LIFE.</h2>
+    <p>
+      In-house blasting, precision painting, and machine refurbishment
+      focused on end-user satisfaction.
+    </p>
+
+    <div class="stat-row">
+      <div class="facility-stat">
+        <span class="big-num">100%</span>
+        <span>RESTORATION</span>
+      </div>
+      <div class="facility-stat">
+        <span class="big-num">ISO</span>
+        <span>QUALITY STANDARDS</span>
+      </div>
+    </div>
+
+    <br><br>
+    <a href="{{ url_for('facility') }}" class="btn btn-primary">Enter Facility</a>
+  </div>
+</section>
+
+<section class="final-cta reveal">
+  <div class="cta-content">
+    <h2>READY TO DEPLOY?</h2>
+    <p>Join the 30+ customers trusting Jay Bhadra Engineering.</p>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Chh. Sambhajinagar, Maharashtra</p>
+      </div>
+      <div class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <p>+91 90116 64441</p>
+      </div>
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <p>jaybhadraengineering4441@gmail.com</p>
+      </div>
+    </div>
+
+    <a href="{{ url_for('contact') }}" class="btn btn-primary">Initiate Project</a>
+  </div>
+</section>
+{% endblock %}

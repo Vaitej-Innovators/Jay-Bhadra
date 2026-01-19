@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+{% block title %}Capabilities{% endblock %}
+
+{% block styles %}
+<style>
+    /* Specific Styles for Capability Cards to match your image */
+    .cap-card {
+        background: white;
+        border: 1px solid #e5e7eb;
+        padding: 40px 30px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Top Orange Accent on Hover */
+    .cap-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        background: var(--accent);
+        transition: width 0.3s ease;
+    }
+
+    .cap-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        border-color: transparent;
+    }
+
+    .cap-card:hover::before {
+        width: 100%;
+    }
+
+    .cap-icon {
+        font-size: 2rem;
+        color: #333; /* Dark Grey Icon */
+        margin-bottom: 25px;
+    }
+
+    .cap-title {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #1a1d24;
+        letter-spacing: 0.5px;
+        margin-bottom: 15px;
+    }
+
+    .cap-desc {
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        flex-grow: 1; /* Pushes list to bottom */
+    }
+
+    /* The List with Dividers */
+    .cap-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid #e5e7eb; /* Top Separator */
+    }
+
+    .cap-list li {
+        padding: 15px 0;
+        border-bottom: 1px solid #f3f4f6; /* Subtle dividers between items */
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #333;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .cap-list li:last-child {
+        border-bottom: none;
+    }
+
+    .cap-list i {
+        color: var(--accent); /* Orange Checkmark */
+        font-size: 0.9rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+
+<section class="section-container" style="padding-top: 100px;">
+    <div class="section-header reveal">
+        <span class="section-tag">TECHNICAL PROWESS</span>
+        <h2 class="hack-text">CORE CAPABILITIES</h2>
+        <div class="header-line"></div>
+    </div>
+
+    <p class="reveal" style="max-width:850px; color:var(--text-secondary); margin-bottom: 50px;">
+        Our engineering capabilities are built around durability, load integrity,
+        and real-world operating conditions across infrastructure, mining,
+        and municipal projects.
+    </p>
+
+    <div class="grid-container">
+        
+        <div class="cap-card reveal">
+            <div class="cap-icon"><i class="fa-solid fa-arrows-left-right-to-line"></i></div>
+            <h3 class="cap-title">Long Reach Attachments</h3>
+            <p class="cap-desc">
+                Engineered for deep excavation and extended-reach applications. 
+                Designed to withstand high-stress loads at maximum extension.
+            </p>
+            <ul class="cap-list">
+                <li><i class="fa-solid fa-check"></i> 17.5m – 21m configurations</li>
+                <li><i class="fa-solid fa-check"></i> 50ft – 70ft working reach</li>
+                <li><i class="fa-solid fa-check"></i> Hyundai Posco 350C Steel</li>
+            </ul>
+        </div>
+
+        <div class="cap-card reveal">
+            <div class="cap-icon"><i class="fa-solid fa-bucket"></i></div>
+            <h3 class="cap-title">Bucket Engineering</h3>
+            <p class="cap-desc">
+                Heavy-duty buckets designed for abrasion-intensive operations. 
+                Reinforced wear strips and cutting edges for longevity.
+            </p>
+            <ul class="cap-list">
+                <li><i class="fa-solid fa-check"></i> SD, HD & GP variants</li>
+                <li><i class="fa-solid fa-check"></i> Trenching & rock buckets</li>
+                <li><i class="fa-solid fa-check"></i> Custom dimensions available</li>
+            </ul>
+        </div>
+
+        <div class="cap-card reveal">
+            <div class="cap-icon"><i class="fa-solid fa-truck-pickup"></i></div>
+            <h3 class="cap-title">Garbage Tipper Systems</h3>
+            <p class="cap-desc">
+                Urban waste handling solutions built for daily duty cycles. 
+                Features leak-proof construction and hydraulic efficiency.
+            </p>
+            <ul class="cap-list">
+                <li><i class="fa-solid fa-check"></i> Tata & Mahindra platforms</li>
+                <li><i class="fa-solid fa-check"></i> Hydraulic top-closure</li>
+                <li><i class="fa-solid fa-check"></i> Corrosion-resistant body</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="section-dark">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <span class="section-tag" style="color:var(--accent);">ENGINEERING DEPTH</span>
+            <h2 style="color:white;">DESIGNED FOR FIELD PERFORMANCE</h2>
+            <div class="header-line"></div>
+        </div>
+
+        <div class="grid-container">
+            <div class="tech-card reveal" style="background: #252830; border-color: #333;">
+                <div class="card-icon"><i class="fa-solid fa-layer-group" style="color:white;"></i></div>
+                <h3 style="color:white;">Material Engineering</h3>
+                <p style="color:#aaa;">
+                    Steel grades selected based on fatigue resistance,
+                    impact tolerance, and operating stress.
+                </p>
+            </div>
+
+            <div class="tech-card reveal" style="background: #252830; border-color: #333;">
+                <div class="card-icon"><i class="fa-solid fa-shapes" style="color:white;"></i></div>
+                <h3 style="color:white;">Structural Design</h3>
+                <p style="color:#aaa;">
+                    Reinforced pin joints, load-distribution geometry,
+                    and weld sequencing for durability.
+                </p>
+            </div>
+
+            <div class="tech-card reveal" style="background: #252830; border-color: #333;">
+                <div class="card-icon"><i class="fa-solid fa-ruler-combined" style="color:white;"></i></div>
+                <h3 style="color:white;">Dimensional Accuracy</h3>
+                <p style="color:#aaa;">
+                    Alignment and fitment checks before surface treatment
+                    and final dispatch.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-container">
+    <div class="section-header reveal">
+        <span class="section-tag">QUALITY CONTROL</span>
+        <h3>ENGINEERING PROCESS</h3>
+        <div class="header-line"></div>
+    </div>
+
+    <div class="split-layout reveal">
+        <div class="text-block">
+            <p>
+                Our manufacturing process follows a controlled workflow
+                to ensure repeatability, safety, and performance.
+            </p>
+
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <span class="spec-label">Phase 1</span>
+                    <span class="spec-value">Design</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Phase 2</span>
+                    <span class="spec-value">Fabricate</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Phase 3</span>
+                    <span class="spec-value">Inspect</span>
+                </div>
+            </div>
+
+            <ul class="spec-list" style="margin-top: 30px;">
+                <li><i class="fa-solid fa-check"></i> CAD-based design validation</li>
+                <li><i class="fa-solid fa-check"></i> Controlled fabrication & welding</li>
+                <li><i class="fa-solid fa-check"></i> Surface preparation & coating</li>
+                <li><i class="fa-solid fa-check"></i> Final inspection & testing</li>
+            </ul>
+        </div>
+
+        <div class="image-block">
+            <img src="{{ url_for('static', filename='assets/images/customer_3.jpeg') }}" alt="Quality Process">
+        </div>
+    </div>
+</section>
+
+<section class="grid-section">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <span class="section-tag">APPLICATIONS</span>
+            <h2 class="hack-text">WHERE OUR SYSTEMS OPERATE</h2>
+        </div>
+
+        <div class="grid-container">
+            <div class="tech-card reveal">
+                <h3>Infrastructure Projects</h3>
+                <p>Roads, bridges, river dredging, and large-scale excavation.</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <h3>Mining & Quarry</h3>
+                <p>High-abrasion, high-load operating environments.</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <h3>Urban Development</h3>
+                <p>Municipal waste handling and redevelopment operations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="final-cta reveal">
+    <div class="cta-content">
+        <h2>NEED A CUSTOM ENGINEERING SOLUTION?</h2>
+        <p>
+            Share your machine model, operating conditions,
+            and application requirements with our team.
+        </p>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Request Technical Consultation</a>
+    </div>
+</section>
+
+{% endblock %}

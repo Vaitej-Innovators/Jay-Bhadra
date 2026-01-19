@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+<section class="section-container" style="margin-top:120px;">
+    <div class="section-header reveal">
+        <span class="section-tag">ABOUT US</span>
+        <h2 class="hack-text">ENGINEERING SINCE 2020</h2>
+        <div class="header-line"></div>
+    </div>
+
+    <p class="reveal" style="max-width:900px; color:#555;">
+        Jay Bhadra Hydraulics & Engineering is one of the leading manufacturers
+        of Long Reach Boom Arms, buckets, and heavy-duty attachments.
+        We also specialise in refurbishment of used machines to ensure
+        long service life and end-user satisfaction.
+    </p>
+</section>
+
+<section class="section-container" style="padding-top:40px;">
+    <div class="split-layout reveal">
+        <div class="text-block">
+            <h3>Who We Are</h3>
+            <p>
+                Established in 2020, Jay Bhadra Hydraulics & Engineering has grown
+                into a trusted name in heavy engineering and fabrication.
+                With years of hands-on experience, we deliver reliable,
+                high-performance solutions for construction and industrial machinery.
+            </p>
+
+            <ul class="spec-list">
+                <li><strong>Established:</strong> 2020</li>
+                <li><strong>Specialisation:</strong> Long Reach Boom Arms & Buckets</li>
+                <li><strong>Customers:</strong> 30+ Pan India</li>
+                <li><strong>Location:</strong> Maharashtra, India</li>
+            </ul>
+        </div>
+
+        <div class="image-block" style="background:#f0f0f0; border:1px solid var(--border-line); display:grid; place-items:center;">
+            <img src="{{ url_for('static', filename='assets/images/IMG_3915.JPG') }}" alt="ABOUT COMPANY IMAGE">
+        </div>
+    </div>
+</section>
+
+<section class="grid-section">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <span class="section-tag">WHAT WE DO</span>
+            <h2 class="hack-text">CORE EXPERTISE</h2>
+        </div>
+
+        <div class="grid-container">
+            <div class="tech-card reveal">
+                <h3>Long Reach Attachments</h3>
+                <p>
+                    Manufacturing of long reach boom arms from 17.5mt to 21mt
+                    using high-value Hyundai Posco 350C steel.
+                </p>
+            </div>
+
+            <div class="tech-card reveal">
+                <h3>Bucket Manufacturing</h3>
+                <p>
+                    Shovel, Backhoe, Loader, Excavator, SD, HD, GP and Trenching
+                    buckets designed as per customer requirements.
+                </p>
+            </div>
+
+            <div class="tech-card reveal">
+                <h3>Machine Refurbishment</h3>
+                <p>
+                    Complete refurbishment of used machines including
+                    fabrication repair, blasting, painting and finishing.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-container" style="padding-top: 80px; padding-bottom: 40px;">
+    <div class="section-header reveal">
+        <span class="section-tag">GALLERY</span>
+        <h2 class="hack-text">DELIVERING EXCELLENCE</h2>
+        <div class="header-line"></div>
+        <p style="margin-top:15px; color:#555;">Glimpses of our dispatched units and satisfied customers across India.</p>
+    </div>
+
+    <div class="gallery-grid reveal">
+        
+        <div class="gallery-card">
+            <img src="{{ url_for('static', filename='assets/images/customer_1.jpeg') }}" alt="Customer Delivery">
+            <div class="gallery-overlay"></div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="{{ url_for('static', filename='assets/images/customer_2.jpeg') }}" alt="Long Reach Boom">
+            <div class="gallery-overlay"></div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="{{ url_for('static', filename='assets/images/customer_3.jpeg') }}" alt="Refurbishment Work">
+            <div class="gallery-overlay"></div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="{{ url_for('static', filename='assets/images/customer_4.jpeg') }}" alt="Site Operation">
+            <div class="gallery-overlay"></div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section-container">
+    <div class="section-header reveal">
+        <span class="section-tag">OUR PRESENCE</span>
+        <h2 class="hack-text">PAN INDIA OPERATIONS</h2>
+        <div class="header-line"></div>
+    </div>
+
+    <p class="reveal" style="max-width:900px; color:#555;">
+        Headquartered at Chh. Sambhajinagar, Maharashtra,
+        our manufacturing facility serves customers across India.
+        With a state-of-the-art setup and experienced workforce,
+        we continue to support infrastructure growth nationwide.
+    </p>
+
+    <ul class="spec-list reveal" style="margin-top:20px;">
+        <li><strong>Head Office & Manufacturing:</strong> Chh. Sambhajinagar</li>
+        <li><strong>State:</strong> Maharashtra</li>
+        <li><strong>Service Reach:</strong> Pan India</li>
+    </ul>
+</section>
+
+<section class="final-cta reveal">
+    <div class="cta-content">
+        <h2>BUILD WITH EXPERIENCE</h2>
+        <p>
+            Partner with a company trusted by 30+ customers
+            for engineering reliability and performance.
+        </p>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Start a Conversation</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<section class="section-container" style="margin-top:120px;">
+    <div class="section-header reveal">
+        <span class="section-tag">PROJECT EXPERIENCE</span>
+        <h2 class="hack-text">CASE STUDIES & DEPLOYMENTS</h2>
+        <div class="header-line"></div>
+    </div>
+
+    <p class="reveal" style="max-width:900px; color:#555;">
+        Proven execution across infrastructure, mining, municipal systems, and heavy equipment modernization.
+    </p>
+</section>
+
+<section class="grid-section">
+    <div class="section-container">
+        <div class="grid-container">
+
+            <div class="tech-card reveal">
+                <img src="{{ url_for('static', filename='assets/images/grabber.jpg') }}" alt="Grabber Attachment">
+                <h3>Grabber Attachment</h3>
+                <p><strong>Application:</strong> Scrap & bulk material handling</p>
+                <p><strong>Impact:</strong> Faster cycle time & safer operations</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <img src="{{ url_for('static', filename='assets/images/electric_machine.jpg') }}" alt="Electric Machine Refurbishment">
+                <h3>Machine Refurbishment – Electric</h3>
+                <p><strong>Scope:</strong> Powertrain & control system conversion</p>
+                <p><strong>Impact:</strong> Lower operating cost & emissions</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <img src="{{ url_for('static', filename='assets/images/hyva_tipper.jpg') }}" alt="Hyva Tipper">
+                <h3>Hyva Tipper System</h3>
+                <p><strong>Application:</strong> Construction & mining logistics</p>
+                <p><strong>Impact:</strong> Consistent lifting & high uptime</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <img src="{{ url_for('static', filename='assets/images/hyva-body.jpg') }}" alt="Hyva Body Manufacturing">
+                <h3>Hyva Body Manufacturing</h3>
+                <p><strong>Customization:</strong> Payload & site-specific design</p>
+                <p><strong>Impact:</strong> Extended body life & stability</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <img src="{{ url_for('static', filename='assets/images/trailer_fabrication.jpg') }}" alt="Trailer Fabrication">
+                <h3>Trailer Fabrication</h3>
+                <p><strong>Types:</strong> Low-bed / Semi-bed / High-bed</p>
+                <p><strong>Impact:</strong> Heavy-duty transport readiness</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <img src="{{ url_for('static', filename='assets/images/braker_body.jpg') }}" alt="Breaker Body">
+                <h3>Breaker Body</h3>
+                <p><strong>Application:</strong> Demolition & rock breaking</p>
+                <p><strong>Impact:</strong> Shock-resistant & durable build</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.NKIgF3Dye8usjaWnPVEhpQHaFj?rs=1&pid=ImgDetMain" alt="Long Reach Boom">
+                <h3>Long Reach Boom Attachment</h3>
+                <p><strong>Reach:</strong> 17.5m – 21m</p>
+                <p><strong>Impact:</strong> Enhanced dredging & excavation depth</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <img src="https://galenattachments.com/wp-content/uploads/2021/06/Heavy-Duty-Bucket-Excavator-7.jpg" alt="Heavy Duty Buckets">
+                <h3>Heavy Duty Buckets</h3>
+                <p><strong>Types:</strong> SD / HD / GP / Trenching</p>
+                <p><strong>Impact:</strong> Reduced wear & higher productivity</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="final-cta reveal">
+    <div class="cta-content">
+        <h2>HAVE A SIMILAR PROJECT?</h2>
+        <p>Let’s translate requirements into execution.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Start a Project</a>
+    </div>
+</section>
+{% endblock %}

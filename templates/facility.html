@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% block title %}Facility{% endblock %}
+
+{% block content %}
+<section class="section-container" style="margin-top:120px;">
+    <div class="section-header reveal">
+        <span class="section-tag">INFRASTRUCTURE</span>
+        <h2 class="hack-text">MANUFACTURING HUB</h2>
+        <div class="header-line"></div>
+    </div>
+
+    <p class="reveal" style="max-width:850px; color:#555;">
+        Our facility is designed to support heavy fabrication, precision assembly,
+        and complete machine restoration under controlled, in-house processes.
+    </p>
+</section>
+
+<section class="section-container" style="padding-top:40px;">
+    <div class="split-layout reveal" style="margin-bottom:60px;">
+        <div class="text-block">
+            <h3>State of the Art Facility</h3>
+            <p>
+                Located in Maharashtra, our manufacturing unit is equipped to handle
+                fabrication, refurbishment, and finishing for heavy machinery components.
+            </p>
+
+            <ul class="spec-list">
+                <li><strong>Dedicated Sections:</strong> Bucket, Boom Arm & Refurbishing Bays</li>
+                <li><strong>Surface Treatment:</strong> In-house Blasting & Painting</li>
+                <li><strong>Skilled Workforce:</strong> Experienced welders & fabricators</li>
+            </ul>
+        </div>
+
+        <div class="image-block" style="background:#f0f0f0; border:1px solid var(--border-line); display:grid; place-items:center;">
+            <img src="{{ url_for('static', filename='assets/images/facility-bg.jpg') }}" alt="Facility Interior" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+    </div>
+</section>
+
+<section class="grid-section">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <span class="section-tag">FACILITY CAPABILITIES</span>
+            <h2 class="hack-text">WHAT WE HANDLE IN-HOUSE</h2>
+        </div>
+
+        <div class="grid-container">
+            <div class="tech-card reveal">
+                <h3>Heavy Fabrication</h3>
+                <p>
+                    Structural fabrication for long reach arms, buckets,
+                    and custom attachments using certified steel grades.
+                </p>
+            </div>
+
+            <div class="tech-card reveal">
+                <h3>Machine Refurbishment</h3>
+                <p>
+                    Complete mechanical restoration including dismantling,
+                    repair, alignment, and repainting.
+                </p>
+            </div>
+
+            <div class="tech-card reveal">
+                <h3>Surface Preparation</h3>
+                <p>
+                    Controlled blasting and industrial-grade painting
+                    to ensure corrosion resistance and durability.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-container">
+    <div class="section-header reveal">
+        <span class="section-tag">PROCESS FLOW</span>
+        <h3>FROM RAW STEEL TO DEPLOYMENT</h3>
+        <div class="header-line"></div>
+    </div>
+
+    <div class="grid-container reveal">
+        <div class="tech-card">
+            <div class="card-icon"><i class="fa-solid fa-1"></i></div>
+            <h3>Material Preparation</h3>
+            <p>Steel cutting, profiling, and preparation for fabrication.</p>
+        </div>
+
+        <div class="tech-card">
+            <div class="card-icon"><i class="fa-solid fa-2"></i></div>
+            <h3>Fabrication & Welding</h3>
+            <p>Controlled welding processes with dimensional accuracy checks.</p>
+        </div>
+
+        <div class="tech-card">
+            <div class="card-icon"><i class="fa-solid fa-3"></i></div>
+            <h3>Assembly & Alignment</h3>
+            <p>Component fitment, pin alignment, and joint inspection.</p>
+        </div>
+
+        <div class="tech-card">
+            <div class="card-icon"><i class="fa-solid fa-4"></i></div>
+            <h3>Surface Treatment</h3>
+            <p>Blasting, priming, and industrial-grade paint application.</p>
+        </div>
+
+        <div class="tech-card">
+            <div class="card-icon"><i class="fa-solid fa-5"></i></div>
+            <h3>Final Inspection</h3>
+            <p>Quality checks before dispatch and deployment.</p>
+        </div>
+    </div>
+</section>
+
+<section class="grid-section">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <span class="section-tag">WHY OUR FACILITY</span>
+            <h2 class="hack-text">BUILT FOR RELIABILITY</h2>
+        </div>
+
+        <div class="grid-container">
+            <div class="tech-card reveal">
+                <h3>End-to-End Control</h3>
+                <p>Minimal outsourcing ensures consistent quality and timelines.</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <h3>Operational Efficiency</h3>
+                <p>Optimized layout reduces material movement and cycle time.</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <h3>Quality Focus</h3>
+                <p>Inspection-driven workflow minimizes rework and failure risk.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="final-cta reveal">
+    <div class="cta-content">
+        <h2>VISIT OR COLLABORATE WITH US</h2>
+        <p>
+            Whether fabrication, refurbishment, or custom engineering —
+            our facility is ready to support your project.
+        </p>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Schedule a Discussion</a>
+    </div>
+</section>
+{% endblock %}
