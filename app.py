@@ -1,13 +1,28 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_mail import Mail, Message
 from config import Config
+import logging
 
 app = Flask(__name__)
 app.config.from_object(Config)
 
 mail = Mail(app)
 
-# ROUTES ----------------------------
+# --------------------------
+# LOGGING (optional but useful)
+# --------------------------
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler("app.log"),
+        logging.StreamHandler()
+    ]
+)
+
+# --------------------------
+# ROUTES
+# --------------------------
 
 @app.route('/')
 def home():
@@ -41,6 +56,10 @@ def people():
 def presence():
     return render_template('presence.html', title="Presence")
 
+# --------------------------
+# CONTACT FORM
+# --------------------------
+
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
@@ -58,33 +77,38 @@ def contact():
         )
 
         msg.body = f"""
-        New Enquiry Received from Website:
-        ----------------------------------
-        Name: {name}
-        Company: {company}
-        Phone: {phone}
-        Email: {email_addr}
+New Enquiry Received from Website
+----------------------------------
+Name: {name}
+Company: {company}
+Phone: {phone}
+Email: {email_addr}
 
-        Requirement: {requirement}
-        Machine Model: {model}
+Requirement: {requirement}
+Machine Model: {model}
 
-        Message Details:
-        {user_message}
-        """
+Message Details:
+{user_message}
+"""
 
         try:
             mail.send(msg)
-            flash("Thank you! Your enquiry has been sent to our engineering team.")
+            flash("Thank you! Your enquiry has been sent to our engineering team.", "success")
+            logging.info(f"Email sent from {name} ({email_addr})")
         except Exception as e:
-            print(f"Email error: {e}")
-            flash("Error sending enquiry. Please try again later.")
+            logging.error(f"Email error: {e}")
+            flash("Error sending enquiry. Please try again later.", "danger")
 
         return redirect(url_for('contact'))
 
     return render_template('contact.html', title="Contact")
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# --------------------------
+# GUNICORN ENTRYPOINT
+# --------------------------
 
-# IMPORTANT: Use a generated 'App Password', NOT your normal login password.
-# Go to Google Account > Security > 2-Step Verification > App Passwords
+def create_app():
+    return app
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
