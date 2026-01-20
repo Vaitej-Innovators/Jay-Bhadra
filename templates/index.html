@@ -6,7 +6,7 @@
   <div class="loader-content">
     <div class="loader-header">
       <span>JAY BHADRA SYSTEMS</span>
-      <span>V 4.0</span>
+      <span>V 4.3</span>
     </div>
     <div class="loader-bar-bg">
       <div class="loader-bar-fill"></div>
@@ -23,9 +23,7 @@
 
   <div class="hero-slider">
     <div class="slide active" style="background-image: url('{{ url_for('static', filename='assets/images/slide_3.jpeg') }}');"></div>
-    
     <div class="slide" style="background-image: url('{{ url_for('static', filename='assets/images/customer_2.jpeg') }}');"></div>
-    
     <div class="slide" style="background-image: url('{{ url_for('static', filename='assets/images/customer_3.jpeg') }}');"></div>
   </div>
 
@@ -38,8 +36,8 @@
     </h1>
 
     <p class="hero-subtitle">
-      Manufacturing Long Reach Boom Arms (17.5mt - 21mt) and Heavy-Duty Attachments.
-      Engineered with <strong>Hyundai Posco 350C Steel</strong>.
+      Manufacturing <strong>Long Reach</strong> & <strong>Heavy Duty Booms</strong> for 210 Class Excavators.
+      Engineered with Hyundai Posco E350C Steel for extreme durability.
     </p>
 
     <div class="hero-actions">
@@ -75,21 +73,22 @@
   <div class="section-container">
     <div class="section-header reveal">
       <span class="section-tag">FLAGSHIP SERIES</span>
-      <h2 class="hack-text">LONG REACH SYSTEMS</h2>
+      <h2 class="hack-text">EXCAVATION SYSTEMS</h2>
       <div class="header-line"></div>
     </div>
 
     <div class="split-layout reveal">
       <div class="text-block">
+        <span class="product-label">EXTENDED RANGE</span>
         <h3>REACH FURTHER. DIG DEEPER.</h3>
         <p>
           Custom manufactured long reach boom arms designed for maximum reach.
           Leveraging high-value steel and rich experience in fabrication.
         </p>
         <ul class="spec-list">
-          <li><i class="fa-solid fa-crosshairs"></i> <strong>Range:</strong> 17.5mt – 21mt</li>
-          <li><i class="fa-solid fa-ruler-vertical"></i> <strong>Reach:</strong> 50ft – 70ft</li>
-          <li><i class="fa-solid fa-layer-group"></i> <strong>Material:</strong> 350C Hyundai Posco Steel</li>
+          <li><i class="fa-solid fa-crosshairs"></i> <strong>Range:</strong> 19.5mt – 21mt</li>
+          <li><i class="fa-solid fa-ruler-vertical"></i> <strong>Reach:</strong> 50ft – 60ft</li>
+          <li><i class="fa-solid fa-layer-group"></i> <strong>Material:</strong> E350C Hyundai Posco Steel</li>
         </ul>
         <a href="{{ url_for('products') }}" class="btn btn-primary">View Specs</a>
       </div>
@@ -97,13 +96,45 @@
       <div class="image-block">
         <model-viewer 
             src="{{ url_for('static', filename='assets/models/long-reach.glb') }}" 
-            poster="{{ url_for('static', filename='assets/images/lrb.jpeg') }}"
+            poster="{{ url_for('static', filename='assets/images/long_reach_boom_excavator.png') }}"
             alt="Long Reach Boom"
             auto-rotate camera-controls shadow-intensity="1"
-            style="width:100%; height:400px; background:#f0f0f0;">
+            style="width:100%; height:400px; background:#f0f0f0; border-radius: 4px;">
         </model-viewer>
       </div>
     </div>
+
+    <div class="section-divider reveal" style="margin: 60px 0; border-bottom: 1px dashed #444;"></div>
+
+    <div class="split-layout reveal"> 
+      
+      <div class="image-block">
+         <div class="img-wrapper" style="border-radius: 4px; overflow: hidden; height: 100%; min-height: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            <img src="{{ url_for('static', filename='assets/images/short_boom_excavator.png') }}" 
+                 alt="Heavy Duty Short Boom for 210 Excavator" 
+                 style="width: 100%; height: 100%; object-fit: cover; display: block;">
+         </div>
+      </div>
+
+      <div class="text-block">
+        <span class="product-label" style="color: var(--accent-color);">HEAVY DUTY STANDARD</span>
+        <h3>SHORT / REGULAR BOOM (210 CLASS)</h3>
+        <p>
+          Engineered specifically for <strong>any 210 Excavator</strong> (Tata Hitachi, Komatsu, Hyundai, Kobelco, etc.).
+          Reinforced structure to withstand higher breakout forces than standard OEM parts. 
+          Perfect for tunneling and heavy rock breaking.
+        </p>
+        <ul class="spec-list">
+            <li><i class="fa-solid fa-wrench"></i> <strong>Fitment:</strong> Any 210 Class Excavator</li>
+            <li><i class="fa-solid fa-shield-halved"></i> <strong>Build:</strong> Heavy Duty Reinforced</li>
+            <li><i class="fa-solid fa-weight-hanging"></i> <strong>Application:</strong> Rock Breaking / Tunneling</li>
+        </ul>
+        <div class="btn-group">
+            <a href="{{ url_for('products') }}" class="btn btn-primary">Check Compatibility</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 

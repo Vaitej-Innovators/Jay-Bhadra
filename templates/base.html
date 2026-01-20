@@ -47,7 +47,7 @@
             gap: 16px;
             text-decoration: none;
             height: 100%;
-            z-index: 1100; /* Ensure logo stays above mobile menu */
+            z-index: 1100;
         }
         
         .nav-logo-wrapper {
@@ -150,33 +150,114 @@
             transition: transform 0.3s ease;
         }
 
-        /* --- 5. FOOTER SOCIALS (BIG ICONS) --- */
-        .footer-socials {
-            display: flex;
-            justify-content: center;
-            gap: 30px; /* More spacing */
-            margin-top: 30px;
+        /* --- 5. UPDATED FOOTER STYLES --- */
+        .footer {
+            background-color: #0b0d11; /* Deeper Black */
+            border-top: 4px solid var(--accent);
+            padding: 0;
+            font-family: var(--font-body);
         }
 
-        .footer-socials a {
+        .footer-main {
+            padding: 80px 0 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr; /* 3 Column Layout */
+            gap: 60px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-col h3::before {
+            content: ''; width: 4px; height: 18px; background: var(--accent); display: block;
+        }
+
+        .footer-desc {
+            color: #888;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            max-width: 350px;
+        }
+
+        /* Contact Items */
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            color: #a0a0a0;
+            font-size: 0.95rem;
+        }
+
+        .footer-contact-item i {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-top: 4px;
+        }
+
+        /* Social Buttons */
+        .social-grid {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
             color: white;
-            font-size: 1.8rem; /* Bigger Icon Size */
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1.3rem;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
         }
 
-        .footer-socials a:hover {
-            background: var(--accent); /* Orange Background on Hover */
-            border-color: var(--accent);
-            transform: translateY(-5px) scale(1.1); /* Pop Up Effect */
-            box-shadow: 0 10px 20px rgba(255, 60, 0, 0.3);
+        .social-btn:hover {
+            transform: translateY(-5px) scale(1.1);
+            border-color: transparent;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Brand Colors on Hover */
+        .social-btn.whatsapp:hover { background: #25D366; }
+        .social-btn.instagram:hover { 
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); 
+        }
+        .social-btn.facebook:hover { background: #1877F2; }
+
+        /* Copyright Bar */
+        .footer-bottom {
+            background: #060709;
+            padding: 25px 40px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: #555;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         /* --- 6. RESPONSIVE MEDIA QUERIES --- */
@@ -189,6 +270,8 @@
             .nav-logo-wrapper { height: 42px; width: 42px; }
 
             .mobile-menu-btn { display: block; }
+            .footer-main { grid-template-columns: 1fr; gap: 40px; text-align: left; }
+            .footer-bottom { flex-direction: column; gap: 10px; }
 
             /* Mobile Menu - Solid Black */
             .nav-links {
@@ -297,31 +380,58 @@
     {% block content %}{% endblock %}
 
     <footer class="footer">
-      <div class="footer-bar">
-        &copy; 2026 Jay Bhadra Group of Engineers.<br>
-        <span class="tagline">Ek Paul Pragatikade (One Step Towards Progress).</span>
+        <div class="footer-main">
+            <div class="footer-col">
+                <h3>Jay Bhadra Group</h3>
+                <p class="footer-desc">
+                    Manufacturing high-performance excavator attachments and long reach systems. 
+                    Engineered with precision, built for the impossible.
+                </p>
+                <div class="footer-desc" style="font-weight: 600; color: #fff;">
+                    Ek Paul Pragatikade (One Step Towards Progress).
+                </div>
+            </div>
 
-        <div class="contact-grid" style="margin-top:20px;">
-          <div class="contact-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Chh. Sambhajinagar, Maharashtra, India</span>
-          </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-phone"></i>
-            <span>+91 90116 64441</span>
-          </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <span>jaybhadraengineering4441@gmail.com</span>
-          </div>
+            <div class="footer-col">
+                <h3>Contact HQ</h3>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Chhatrapati Sambhajinagar,<br>Maharashtra, India - 431001</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 90116 64441</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>jaybhadraengineering4441@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Connect</h3>
+                <p class="footer-desc">Follow our latest projects and manufacturing updates.</p>
+                
+                <div class="social-grid">
+                    <a href="https://wa.me/919011664441" target="_blank" class="social-btn whatsapp" title="Chat on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/jaybhadra_engineering4441" target="_blank" class="social-btn instagram" title="Follow on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    
+                    <a href="https://www.facebook.com/share/17vac9YNkA/" target="_blank" class="social-btn facebook" title="Like on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <div class="footer-socials">
-          <a href="https://wa.me/919011664441" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.instagram.com/jaybhadra_engineering4441" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Jay Bhadra Industries. All Rights Reserved.</span>
+            <span style="opacity: 0.5;">ISO 9001:2015 Certified</span>
         </div>
-      </div>
     </footer>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
