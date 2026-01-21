@@ -662,3 +662,46 @@
 2026-01-20 12:05:14,147 [INFO] 127.0.0.1 - - [20/Jan/2026 12:05:14] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 2026-01-20 12:05:14,160 [INFO] 127.0.0.1 - - [20/Jan/2026 12:05:14] "[36mGET /static/assets/images/IMG_3915.JPG HTTP/1.1[0m" 304 -
 2026-01-20 12:05:14,167 [INFO] 127.0.0.1 - - [20/Jan/2026 12:05:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-01-20 13:28:58,855 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.6:5000
+2026-01-20 13:28:58,855 [INFO] [33mPress CTRL+C to quit[0m
+2026-01-20 13:29:03,357 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:03] "GET / HTTP/1.1" 200 -
+2026-01-20 13:29:03,673 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-01-20 13:29:03,684 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:03] "[36mGET /static/assets/images/IMG_3915.JPG HTTP/1.1[0m" 304 -
+2026-01-20 13:29:03,691 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:03] "[36mGET /static/assets/images/short_boom_excavator.png HTTP/1.1[0m" 304 -
+2026-01-20 13:29:03,823 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-01-20 13:29:03,966 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:03] "[36mGET /static/assets/images/slide_3.jpeg HTTP/1.1[0m" 304 -
+2026-01-20 13:29:03,966 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:03] "[36mGET /static/assets/images/customer_2.jpeg HTTP/1.1[0m" 304 -
+2026-01-20 13:29:03,966 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:03] "[36mGET /static/assets/images/customer_3.jpeg HTTP/1.1[0m" 304 -
+2026-01-20 13:29:04,185 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:04] "[36mGET /static/assets/images/long_reach_boom_excavator.png HTTP/1.1[0m" 304 -
+2026-01-20 13:29:06,895 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:06] "[33mGET /static/assets/models/long-reach.glb HTTP/1.1[0m" 404 -
+2026-01-20 13:29:10,044 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-01-20 13:29:10,087 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-20 13:29:16,164 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:16] "GET /contact HTTP/1.1" 200 -
+2026-01-20 13:29:16,219 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-01-20 13:29:16,267 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:16] "[36mGET /static/assets/images/IMG_3915.JPG HTTP/1.1[0m" 304 -
+2026-01-20 13:29:16,298 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-01-20 13:29:16,300 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-20 13:29:56,318 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:56] "GET /contact HTTP/1.1" 200 -
+2026-01-20 13:29:56,391 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:56] "[36mGET /static/assets/images/IMG_3915.JPG HTTP/1.1[0m" 304 -
+2026-01-20 13:29:56,391 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:56] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-01-20 13:29:56,391 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-01-20 13:29:56,411 [INFO] 127.0.0.1 - - [20/Jan/2026 13:29:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-20 13:30:38,268 [INFO] 127.0.0.1 - - [20/Jan/2026 13:30:38] "GET /contact HTTP/1.1" 200 -
+2026-01-20 13:30:38,310 [INFO] 127.0.0.1 - - [20/Jan/2026 13:30:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-01-20 13:30:38,313 [INFO] 127.0.0.1 - - [20/Jan/2026 13:30:38] "[36mGET /static/assets/images/IMG_3915.JPG HTTP/1.1[0m" 304 -
+2026-01-20 13:30:38,314 [INFO] 127.0.0.1 - - [20/Jan/2026 13:30:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-01-20 13:30:38,344 [INFO] 127.0.0.1 - - [20/Jan/2026 13:30:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-20 14:10:14,770 [INFO] 127.0.0.1 - - [20/Jan/2026 14:10:14] "GET / HTTP/1.1" 200 -
+2026-01-20 14:10:14,952 [INFO] 127.0.0.1 - - [20/Jan/2026 14:10:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-20 14:10:14,957 [INFO] 127.0.0.1 - - [20/Jan/2026 14:10:14] "[36mGET /static/assets/images/short_boom_excavator.png HTTP/1.1[0m" 304 -
+2026-01-20 14:10:14,964 [INFO] 127.0.0.1 - - [20/Jan/2026 14:10:14] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2026-01-20 14:10:14,977 [INFO] 127.0.0.1 - - [20/Jan/2026 14:10:14] "[36mGET /static/assets/images/IMG_3915.JPG HTTP/1.1[0m" 304 -
+2026-01-20 14:10:15,018 [INFO] 127.0.0.1 - - [20/Jan/2026 14:10:15] "[36mGET /static/assets/images/slide_3.jpeg HTTP/1.1[0m" 304 -
+2026-01-20 14:10:15,024 [INFO] 127.0.0.1 - - [20/Jan/2026 14:10:15] "[36mGET /static/assets/images/customer_2.jpeg HTTP/1.1[0m" 304 -
+2026-01-20 14:10:15,041 [INFO] 127.0.0.1 - - [20/Jan/2026 14:10:15] "[36mGET /static/assets/images/customer_3.jpeg HTTP/1.1[0m" 304 -
+2026-01-20 14:10:15,065 [INFO] 127.0.0.1 - - [20/Jan/2026 14:10:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-01-20 14:10:15,430 [INFO] 127.0.0.1 - - [20/Jan/2026 14:10:15] "[36mGET /static/assets/images/long_reach_boom_excavator.png HTTP/1.1[0m" 304 -
+2026-01-20 14:10:17,250 [INFO] 127.0.0.1 - - [20/Jan/2026 14:10:17] "[33mGET /static/assets/models/long-reach.glb HTTP/1.1[0m" 404 -
